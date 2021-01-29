@@ -1,0 +1,116 @@
+[
+  {
+    "orgName": "DeliveryClub",
+    "orgAddress": "Moscow",
+    "phoneNumber": "+7 (977) 356-32-97",
+    "itn":1563551854,
+    "psrn": 4729501745336,
+    "foundationDate": "25.08.2001",
+    "securities":
+      [
+          {
+          "id": 184925,
+          "company": "MailGroup",
+          "currency": "RU",
+          "parValue": 423.0145,
+          "totalNumber": 2500,
+          "purchaseDate": "12.05.2018",
+          "expiryDate": "13.08.2020"
+        },{
+          "id": 481923,
+          "company": "Yandex",
+          "currency": "RU",
+          "parValue": 1291.02,
+          "totalNumber": 1000,
+          "purchaseDate": "28.02.2016",
+          "expiryDate": "01.11.2022"
+        },{
+          "id": 918372,
+          "company": "TysonFoods",
+          "currency": "USD",
+          "parValue": 97.062,
+          "totalNumber": 400,
+          "purchaseDate": "14.08.2019",
+          "expiryDate": "15.03.2025"
+        }
+      ]
+  },{
+    "orgName": "Tesla Motors",
+    "orgAddress": "San-Carlos",
+    "phoneNumber": "+1 (310) 144-42-14",
+    "itn":3950173000,
+    "psrn": 4827377465184,
+    "foundationDate": "18.07.2007",
+    "securities":
+      [
+        {
+          "id": 394571,
+          "company": "SpaceX",
+          "currency": "USD",
+          "parValue": 465.22,
+          "totalNumber": 1000,
+          "purchaseDate": "14.08.2017",
+          "expiryDate": "15.08.2030"
+        },{
+          "id": 596723,
+          "company": "Virgin Galactic",
+          "currency": "USD",
+          "parValue": 132.12,
+          "totalNumber": 250,
+          "purchaseDate": "10.10.2018",
+          "expiryDate": "12.12.2020"
+      },{
+          "id": 572938,
+          "company": "Apple",
+          "currency": "USD",
+          "parValue": 1021.005,
+          "totalNumber": 300,
+          "purchaseDate": "15.04.2010",
+          "expiryDate": "28.01.2021"
+      },{
+          "id": 912835,
+          "company": "Microsoft",
+          "currency": "USD",
+          "parValue": 283.45,
+          "totalNumber": 134,
+          "purchaseDate": "24.02.2010",
+          "expiryDate": "24.02.2020"
+      }
+    ]
+  },{
+    "orgName": "Volkswagen Group",
+    "orgAddress": "Wolfsburg",
+    "phoneNumber": "+4 (917) 788-29-37",
+    "itn":4910004375,
+    "psrn": 8895748857121,
+    "foundationDate": "20.02.1987",
+    "securities":
+        [
+         {
+          "id": 395618,
+          "company": "Audi",
+          "currency": "EU",
+          "parValue": 186.0213,
+          "totalNumber": 580,
+          "purchaseDate": "12.05.2000",
+          "expiryDate": "31.01.2030"
+          },{
+          "id": 102931,
+          "company": "Bank of America",
+          "currency": "USD",
+          "parValue": 594.76,
+          "totalNumber": 1500,
+          "purchaseDate": "02.04.2010",
+          "expiryDate": "08.09.2020"
+          },{
+          "id": 847192,
+          "company": "BMW",
+          "currency": "EU",
+          "parValue": 190.981,
+          "totalNumber": 340,
+          "purchaseDate": "14.08.2015",
+          "expiryDate": "15.03.2017"
+          }
+        ]
+    }
+]
