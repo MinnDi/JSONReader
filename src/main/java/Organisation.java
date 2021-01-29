@@ -42,7 +42,7 @@ public class Organisation {
     }
 
     public void setItn(long itn) {
-        if (itn>9999999999L||itn<1000000000) throw new IllegalArgumentException("ITN is in wrong format, it should contain 10 digits");
+        if (itn>9999999999L||itn<1000000000L) throw new IllegalArgumentException("ITN is in wrong format, it should contain 10 digits");
         this.itn = itn;
     }
 
