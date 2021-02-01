@@ -33,7 +33,8 @@ public class Organisation {
 
     public void setPhoneNumber(String phoneNumber) {
         phoneNumber = phoneNumber.replaceAll("[ )(-]", "");
-        if (phoneNumber.length()!=12&&phoneNumber.charAt(0)=='+'&& !phoneNumber.matches("[+\\d{11}]")) throw new IllegalArgumentException("Phone number is in wrong format, ypu entered number "+ phoneNumber);
+        if (phoneNumber.length()!=12&&phoneNumber.charAt(0)=='+'&& !phoneNumber.matches("[+\\d{11}]"))
+            throw new IllegalArgumentException("Phone number is in wrong format, you entered number "+ phoneNumber+". Number should contain 10 digits with code of country in format +D.");
         this.phoneNumber = phoneNumber;
     }
 
@@ -42,7 +43,7 @@ public class Organisation {
     }
 
     public void setItn(long itn) {
-        if (itn>9999999999L||itn<1000000000L) throw new IllegalArgumentException("ITN is in wrong format, it should contain 10 digits");
+        if (itn>9999999999L||itn<1000000000L) throw new IllegalArgumentException("ITN is in wrong format, it should contain 10 digits. You entered "+ itn +".");
         this.itn = itn;
     }
 
