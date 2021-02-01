@@ -15,14 +15,21 @@ public class JSONReader {
     Organisation[] orgs;
 
     public Organisation[] readJSONtoArray(String path) throws IOException {
-        File f = new File(path);
-        if(f.exists() && !f.isDirectory()) {
+        try {
             Organisation[] orgs;
             ObjectMapper mapper = new ObjectMapper();
             orgs = mapper.readValue(new File(path), Organisation[].class);
             return orgs;
         }
-        else throw new FileNotFoundException("File not found, try another path");
+        catch (FileNotFoundException fe){
+            System.out.println("File not found. Try another file name.");
+            fe.printStackTrace();
+        }
+        catch (IOException e){
+            System.out.println("Exception reading JSON file. Check file format");
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void writeAllOrganisations(Organisation[] orgs){
