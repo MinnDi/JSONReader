@@ -1,3 +1,7 @@
+package Reader;
+import Entities.Currency;
+import Entities.Organisation;
+import Entities.Securities;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -12,14 +16,18 @@ import java.util.stream.Collectors;
 
 public class JSONReader {
 
-    Organisation[] orgs;
+    private Organisation[] orgs;
 
-    public Organisation[] readJSONtoArray(String path) throws IOException {
+    public Organisation[] getOrgs() {
+        return orgs;
+    }
+
+    public void readJSONtoArray(String path){
         try {
             Organisation[] orgs;
             ObjectMapper mapper = new ObjectMapper();
             orgs = mapper.readValue(new File(path), Organisation[].class);
-            return orgs;
+            this.orgs = orgs;
         }
         catch (FileNotFoundException fe){
             System.out.println("File not found. Try another file name.");
@@ -29,7 +37,6 @@ public class JSONReader {
             System.out.println("Exception reading JSON file. Check file format");
             e.printStackTrace();
         }
-        return null;
     }
 
     public void writeAllOrganisations(Organisation[] orgs){
@@ -47,7 +54,7 @@ public class JSONReader {
         if (expiredSequrities.isEmpty()) System.out.println("There are no expired securities found.");
         else {
             System.out.println("Expired Securities: ");
-            expiredSequrities.forEach(s->System.out.printf("Security ID: %s,\nSequrity Expiry Date: %s,\nSequrity Owner Company: %s.\n", s.getId(),s.getExpiryDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),s.getCompany()));
+            expiredSequrities.forEach(s->System.out.printf("Security ID: %s,\nSecurity Expiry Date: %s,\nSequrity Owner Company: %s.\n", s.getId(),s.getExpiryDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),s.getCompany()));
         }
         return expiredSequrities.size();
     }
@@ -77,7 +84,7 @@ public class JSONReader {
         }
     }
 
-    public void getCurrencySecurities(Currency currency,Organisation[] organisations){
+    public void getCurrencySecurities(Currency currency, Organisation[] organisations){
         if (currency!=Currency.EU && currency!=Currency.RU && currency!=Currency.USD) throw new IllegalArgumentException("You are using unsupported currency");
         ArrayList<Securities> currencySecurities = new ArrayList<>();
         Arrays.stream(organisations)
